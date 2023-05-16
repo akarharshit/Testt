@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "945d9285-de3a-42c3-ab51-704cacedfa4d",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25906008",
+		"_collection_link": "https://dark-space-368982.postman.co/workspace/c17646cf-9fbf-4a2a-aa79-251dfd89115e/collection/25906008-945d9285-de3a-42c3-ab51-704cacedfa4d?action=share&creator=25906008&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/register/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Harsh\",\r\n    \"password\":\"Qwerty@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/login/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Harsh\",\r\n    \"password\":\"Qwerty@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/notes/create/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg0MjQyNjY5LCJpYXQiOjE2ODQyMzkwNjksImp0aSI6ImZkNjA4N2U5NjM2YTQ0ODlhOGZlMjU2MTIxYWNjZjQzIiwidXNlcl9pZCI6M30.OPHvb-RLE26Mwu7xfubeswgzsLJyRQ6daqW4Ugz2X6E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "game",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "cvbvcvbn",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/harsh/Downloads/pexels-patrick-case-3718433.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/notes/create/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"notes",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/notes/4/update/",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg0MjQyNjY5LCJpYXQiOjE2ODQyMzkwNjksImp0aSI6ImZkNjA4N2U5NjM2YTQ0ODlhOGZlMjU2MTIxYWNjZjQzIiwidXNlcl9pZCI6M30.OPHvb-RLE26Mwu7xfubeswgzsLJyRQ6daqW4Ugz2X6E",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/notes/<int:note_id>/update/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"notes",
+						"<int:note_id>",
+						"update",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/notes/4/update/",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/notes/<int:note_id>/delete/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"notes",
+						"<int:note_id>",
+						"delete",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
